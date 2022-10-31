@@ -18,7 +18,7 @@ void shortestjobfirst()
   //Executes shortest ms first up to longest ms
   
   //Looping Sequence
-  for(int i=0;i<6;i++){
+  for(int i=0;i<=6;i++){
     if(i==1){
       digitalWrite(l5, HIGH);
       delay(1000);

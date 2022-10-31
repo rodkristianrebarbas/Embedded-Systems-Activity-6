@@ -15,7 +15,7 @@ int l6 = 7;
 //FIFO function
 void fifo()
 {
-  for(int i=0;i<6;i++){
+  for(int i=0;i<=6;i++){
     if(i==1){
       //LED1 = 10 seconds on
       digitalWrite(l1, HIGH);

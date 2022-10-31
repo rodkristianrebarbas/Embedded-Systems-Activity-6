@@ -1,3 +1,9 @@
+//Rod Kristian J. Rebarbas
+//BSCpE 4A
+//CPE 411 - Embedded Systems
+//Activity #6
+//Round Robin Code
+
 int l1 = 2;
 int l2 = 3;
 int l3 = 4;
@@ -17,7 +23,7 @@ void setup()
 
 void loop()
 {
-  //Round-Robin Left to Right
+  //Round Robin Left to Right
   //1s Delay
   digitalWrite(l1, HIGH);
   delay(1000);
@@ -37,7 +43,7 @@ void loop()
   digitalWrite(l6, HIGH);
   delay(1000);
   digitalWrite(l6, LOW);
-  //Round-Robin Right to Left
+  //Round Robin Right to Left
   //1s Delay
   digitalWrite(l6, HIGH);
   delay(1000);

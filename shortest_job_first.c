@@ -1,3 +1,10 @@
+//Rod Kristian J. Rebarbas
+//BSCpE 4A
+//CPE 411 - Embedded Systems
+//Activity #6
+//Shortest Job First Code
+
+//Declaring variables for the LEDs globally
 int l1 = 2;
 int l2 = 3;
 int l3 = 4;
@@ -5,8 +12,10 @@ int l4 = 5;
 int l5 = 6;
 int l6 = 7;
 
+//Setup
 void setup()
 {
+  //Setting up pins to output to light up LEDs
   pinMode(l1, OUTPUT);
   pinMode(l2, OUTPUT);
   pinMode(l3, OUTPUT);
@@ -15,6 +24,7 @@ void setup()
   pinMode(l6, OUTPUT);
 }
 
+//Loop executes repeatedly
 void loop()
 {
   //Shortest Job First

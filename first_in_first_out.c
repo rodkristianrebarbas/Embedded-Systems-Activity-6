@@ -18,7 +18,7 @@ void fifo()
   for(int i=0;i<6;i++){
     if(i=1){
       //LED1 = 10 seconds on
-  	  digitalWrite(l1, HIGH);
+  	digitalWrite(l1, HIGH);
       //10s delay time
       delay(10000);
       digitalWrite(l1, LOW);

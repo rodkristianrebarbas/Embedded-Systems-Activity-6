@@ -15,6 +15,7 @@ int l6 = 7;
 //Setup
 void setup()
 {
+  //Setting up pins to output to light up LEDs
   pinMode(l1, OUTPUT);
   pinMode(l2, OUTPUT);
   pinMode(l3, OUTPUT);

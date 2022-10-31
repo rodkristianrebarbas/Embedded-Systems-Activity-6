@@ -19,31 +19,37 @@ void shortestjobfirst()
   
   //Looping Sequence
   for(int i=0;i<=6;i++){
+    //if i equals 1, executes LED 5 since it has shortest delay time
     if(i==1){
       digitalWrite(l5, HIGH);
       delay(1000);
       digitalWrite(l5, LOW);
     }
+    //if i equals 2, executes LED 6
     if(i==2){
       digitalWrite(l6, HIGH);
       delay(2000);
       digitalWrite(l6, LOW);
     }
+    //if i equals 3, executes LED 4
     if(i==3){
       digitalWrite(l4, HIGH);
       delay(3000);
       digitalWrite(l4, LOW);
     }
+    //if i equals 4, executes LED 2
     if(i==4){
        digitalWrite(l2, HIGH);
        delay(5000);
        digitalWrite(l2, LOW);
     }
+    //if i equals 5, executes LED 3
     if(i==5){
       digitalWrite(l3, HIGH);
       delay(8000);
       digitalWrite(l3, LOW);
     }
+    //if i equals 6, executes LED 1 since it has longest delay time
     if(i==6){
       digitalWrite(l1, HIGH);
       delay(10000);

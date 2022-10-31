@@ -18,7 +18,7 @@ void roundrobinltr(){
   //1s Delay
   
   //Looping Sequence
-  for(int i=0;i<6;i++){
+  for(int i=0;i<=6;i++){
     if(i==1){
       digitalWrite(l1, HIGH);//on
       delay(1000);

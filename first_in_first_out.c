@@ -16,42 +16,42 @@ int l6 = 7;
 void fifo()
 {
   for(int i=0;i<6;i++){
-    if(i=1){
+    if(i==1){
       //LED1 = 10 seconds on
       digitalWrite(l1, HIGH);
       //10s delay time
       delay(10000);
       digitalWrite(l1, LOW);
     }
-    if(i=2){
+    if(i==2){
       //LED2 = 5 seconds on
       digitalWrite(l2, HIGH);
       //5s delay time
       delay(5000);
       digitalWrite(l2, LOW);
     }
-    if(i=3){
+    if(i==3){
       //LED3 = 8 seconds on
       digitalWrite(l3, HIGH);
       //8s delay time
       delay(8000);
       digitalWrite(l3, LOW);
     }
-    if(i=4){
+    if(i==4){
       //LED4 = 3 seconds on
       digitalWrite(l4, HIGH);
       //3s delay time
       delay(3000);
       digitalWrite(l4, LOW);
     }
-    if(i=5){
+    if(i==5){
       //LED5 = 1 seconds on
       digitalWrite(l5, HIGH);
       //1s delay time
       delay(1000);
       digitalWrite(l5, LOW);
     }
-    if(i=6){
+    if(i==6){
       //LED6 = 2 seconds on
       digitalWrite(l6, HIGH);
       //2s delay time

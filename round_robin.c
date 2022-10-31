@@ -24,6 +24,7 @@ void setup()
   pinMode(l6, OUTPUT);
 }
 
+//Loop executes repeatedly
 void loop()
 {
   //Round Robin Left to Right

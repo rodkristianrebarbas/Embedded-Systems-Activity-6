@@ -168,6 +168,7 @@ void roundrobin(){
 //Setup
 void setup()
 {
+  //Serial begins at 9600 baud
   Serial.begin(9600);
   //Storing values in array len[]
   len[0] = t1;

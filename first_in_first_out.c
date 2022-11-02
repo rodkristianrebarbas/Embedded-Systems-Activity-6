@@ -85,6 +85,8 @@ void setup()
   pinMode(l4, OUTPUT);
   pinMode(l5, OUTPUT);
   pinMode(l6, OUTPUT);
+  //Starts the program autonomously
+  Serial.println("First In First Out Starts");
 }
 
 //Loop executes repeatedly
@@ -95,6 +97,8 @@ void loop()
   
   //Calling fifo() function
   fifo();
+  //Ends the program autonomously
+  Serial.println("First In First Out Finished");
   //Stops the looping sequence
   while(Serial.available()==0){}
 }

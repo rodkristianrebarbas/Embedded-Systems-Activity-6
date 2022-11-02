@@ -78,6 +78,8 @@ void leddisplay(){
 //Setup
 void setup()
 {
+  //Setup begins at 9600 baud
+  Serial.begin(9600);
   //Storing values in array len[]
   len[0] = t1;
   len[1] = t2;
@@ -101,4 +103,6 @@ void loop()
   sjf();
   //Executes leddisplay() function
   leddisplay();
+  //Stops the looping sequence
+  while(Serial.available()==0){}
 }

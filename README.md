@@ -6,3 +6,6 @@
 - Embedded Systems
 - Activity #6
 - Embedded Operating System
+
++ No user inputs
++ With code and video demonstration

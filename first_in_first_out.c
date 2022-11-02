@@ -78,6 +78,8 @@ void fifo()
 //Setup
 void setup()
 {
+  //Serial begins at 9600 baud
+  Serial.begin(9600);
   //Setting up pins to output to light up LEDs
   pinMode(l1, OUTPUT);
   pinMode(l2, OUTPUT);

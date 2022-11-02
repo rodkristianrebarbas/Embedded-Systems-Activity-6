@@ -95,6 +95,8 @@ void setup()
   pinMode(l4, OUTPUT);
   pinMode(l5, OUTPUT);
   pinMode(l6, OUTPUT);
+  //Starts the program autonomously
+  Serial.println("Shortest Job First Starts");
 }
 
 //Loop executes repeatedly
@@ -104,6 +106,8 @@ void loop()
   sjf();
   //Executes leddisplay() function
   leddisplay();
+  //Ends the program autonomously
+  Serial.println("Shortest Job First Finished");
   //Stops the looping sequence
   while(Serial.available()==0){}
 }

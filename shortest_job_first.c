@@ -27,6 +27,7 @@ int t6 = 2000;
 
 //Shortest Job First Function
 void sjf(){
+  //Sorting Algorithm - Descending
   int a;
   for (int i = 0; i < 6; ++i) {
      for (int j = i + 1; j < 6; ++j){

@@ -2,7 +2,11 @@
 //BSCpE 4A
 //CPE 411 - Embedded Systems
 //Activity #6
-//Shortest Job First Code
+//Round Robin Code
+
+#define size 6
+
+int len[6];
 
 //Declaring variables for the LEDs globally
 int l1 = 2;
@@ -12,48 +16,61 @@ int l4 = 5;
 int l5 = 6;
 int l6 = 7;
 
-//Shortest Job First function
-void shortestjobfirst()
-{
-  //Executes shortest ms first up to longest ms
-  
-  //Looping Sequence
-  for(int i=0;i<=6;i++){
-    //if i equals 1, executes LED 5 since it has shortest delay time
-    if(i==1){
-      digitalWrite(l5, HIGH);
-      delay(1000);
-      digitalWrite(l5, LOW);
-    }
-    //if i equals 2, executes LED 6
-    if(i==2){
-      digitalWrite(l6, HIGH);
-      delay(2000);
-      digitalWrite(l6, LOW);
-    }
-    //if i equals 3, executes LED 4
-    if(i==3){
-      digitalWrite(l4, HIGH);
-      delay(3000);
-      digitalWrite(l4, LOW);
-    }
-    //if i equals 4, executes LED 2
-    if(i==4){
-       digitalWrite(l2, HIGH);
-       delay(5000);
-       digitalWrite(l2, LOW);
-    }
-    //if i equals 5, executes LED 3
-    if(i==5){
-      digitalWrite(l3, HIGH);
-      delay(8000);
-      digitalWrite(l3, LOW);
-    }
-    //if i equals 6, executes LED 1 since it has longest delay time
-    if(i==6){
+//Declaring variables for burst times
+int t1 = 10000;
+int t2 = 5000;
+int t3 = 8000;
+int t4 = 3000;
+int t5 = 1000;
+int t6 = 2000;
+
+//Shortest Job First Function
+void sjf(){
+  int a;
+  for (int i = 0; i < 6; ++i) {
+     for (int j = i + 1; j < 6; ++j){
+        if (len[i] < len[j]) 
+          {
+             a = len[i];
+             len[i] = len[j];
+             len[j] = a;
+          }
+     }
+  }
+}
+
+//LED Display Function
+void leddisplay(){
+  for(int i=5;i>=0;i--){
+    if (len[i] == t1){
       digitalWrite(l1, HIGH);
-      delay(10000);
-      digitalWrite(l1, LOW);
+  	  delay(t1); 
+  	  digitalWrite(l1, LOW);
+    }
+    if (len[i] == t2){
+      digitalWrite(l2, HIGH);
+  	  delay(t2); 
+  	  digitalWrite(l2, LOW);
+    }
+    if (len[i] == t3){
+      digitalWrite(l3, HIGH);
+  	  delay(t3); 
+  	  digitalWrite(l3, LOW);
+    }
+    if (len[i] == t4){
+      digitalWrite(l4, HIGH);
+  	  delay(t4); 
+  	  digitalWrite(l4, LOW);
+    }
+    if (len[i] == t5){
+      digitalWrite(l5, HIGH);
+  	  delay(t5); 
+  	  digitalWrite(l5, LOW);
+    }
+    if (len[i] == t6){
+      digitalWrite(l6, HIGH);
+  	  delay(t6); 
+  	  digitalWrite(l6, LOW);
     }
   }
 }
@@ -61,6 +78,13 @@ void shortestjobfirst()
 //Setup
 void setup()
 {
+  //Storing values in array len[]
+  len[0] = t1;
+  len[1] = t2;
+  len[2] = t3;
+  len[3] = t4;
+  len[4] = t5;
+  len[5] = t6;
   //Setting up pins to output to light up LEDs
   pinMode(l1, OUTPUT);
   pinMode(l2, OUTPUT);
@@ -73,9 +97,8 @@ void setup()
 //Loop executes repeatedly
 void loop()
 {
-  //Shortest Job First
-  //Shortest to Longest Time(ms) Delay
-  
-  //Executes shortestjobfirst() function
-  shortestjobfirst();
+  //Executes sjf() function
+  sjf();
+  //Executes leddisplay() function
+  leddisplay();
 }

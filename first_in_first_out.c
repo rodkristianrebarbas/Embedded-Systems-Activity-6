@@ -12,6 +12,14 @@ int l4 = 5;
 int l5 = 6;
 int l6 = 7;
 
+//Declaring variables for burst times
+int t1 = 10000;
+int t2 = 5000;
+int t3 = 8000;
+int t4 = 3000;
+int t5 = 1000;
+int t6 = 2000;
+
 //FIFO function
 void fifo()
 {
@@ -20,7 +28,7 @@ void fifo()
       //LED1 = 10 seconds on
       digitalWrite(l1, HIGH);
       //10s delay time
-      delay(10000);
+      delay(t1);
       //off
       digitalWrite(l1, LOW);
     }
@@ -28,41 +36,41 @@ void fifo()
       //LED2 = 5 seconds on
       digitalWrite(l2, HIGH);
       //5s delay time
-      delay(5000);
+      delay(t2);
       //off
-      digitalWrite(l1, LOW);
+      digitalWrite(l2, LOW);
     }
     if(i==3){
       //LED3 = 8 seconds on
       digitalWrite(l3, HIGH);
       //8s delay time
-      delay(8000);
+      delay(t3);
       //off
-      digitalWrite(l1, LOW);
+      digitalWrite(l3, LOW);
     }
     if(i==4){
       //LED4 = 3 seconds on
       digitalWrite(l4, HIGH);
       //3s delay time
-      delay(3000);
+      delay(t4);
       //off
-      digitalWrite(l1, LOW);
+      digitalWrite(l4, LOW);
     }
     if(i==5){
       //LED5 = 1 seconds on
       digitalWrite(l5, HIGH);
       //1s delay time
-      delay(1000);
+      delay(t5);
       //off
-      digitalWrite(l1, LOW);
+      digitalWrite(l5, LOW);
     }
     if(i==6){
       //LED6 = 2 seconds on
       digitalWrite(l6, HIGH);
       //2s delay time
-      delay(2000);
+      delay(t6);
       //off
-      digitalWrite(l1, LOW);
+      digitalWrite(l6, LOW);
     }
   }
 }
@@ -86,5 +94,5 @@ void loop()
   //The first in to first out
   
   //Calling fifo() function
-  fifoenqueue();
+  fifo();
 }

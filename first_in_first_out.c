@@ -23,6 +23,7 @@ int t6 = 2000;
 //FIFO function
 void fifo()
 {
+  //FIFO Algorithm
   for(int i=0;i<=6;i++){
     if(i==1){
       //LED1 = 10 seconds on

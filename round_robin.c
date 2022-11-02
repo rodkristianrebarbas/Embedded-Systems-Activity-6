@@ -49,8 +49,10 @@ void sort_desc(){
 
 //Round Robin Function
 void roundrobin(){
+  //looping sequence through 2D loop
   for(int i=0;i<rrc;i++){
     for(int j=0;j<size;j++){
+      //for LED 1
       if(len[i] == t1){
         if(t1 > qt){
           digitalWrite(l1, HIGH);
@@ -68,6 +70,7 @@ void roundrobin(){
           Serial.println("LED 1 Completed!");
         }
       }
+      //for LED 2
       else if(len[i] == t2){
         if(t2 > qt){
           digitalWrite(l2, HIGH);
@@ -85,6 +88,7 @@ void roundrobin(){
           Serial.println("LED 2 Completed!");
         }
       }
+      //for LED 3
       else if(len[i] == t3){
         if(t3 > qt){
           digitalWrite(l3, HIGH);
@@ -102,6 +106,7 @@ void roundrobin(){
           Serial.println("LED 3 Completed!");
         }
       }
+      //for LED 4
       else if(len[i] == t4){
         if(t4 > qt){
           digitalWrite(l4, HIGH);
@@ -119,6 +124,7 @@ void roundrobin(){
           Serial.println("LED 4 Completed!");
         }
       }
+      //for LED 5
       else if(len[i] == t5){
         if(t5 > qt){
           digitalWrite(l5, HIGH);
@@ -136,6 +142,7 @@ void roundrobin(){
           Serial.println("LED 5 Completed!");
         }
       }
+      //for LED 6
       else if(len[i] == t6){
         if(t6 > qt){
           digitalWrite(l6, HIGH);
@@ -176,6 +183,8 @@ void setup()
   pinMode(l4, OUTPUT);
   pinMode(l5, OUTPUT);
   pinMode(l6, OUTPUT);
+  //Starts the program autonomously
+  Serial.println("Round Robin Starts");
 }
 
 //Loop executes repeatedly
@@ -189,6 +198,8 @@ void loop()
   rrc = mbt/qt;
   //Executes roundrobin() function
   roundrobin();
+  //Ends the program autonomously
+  Serial.println("Round Robin Finished");
   //Stops the looping sequence
   while(Serial.available()==0){}
 }

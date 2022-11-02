@@ -13,7 +13,7 @@ int l5 = 6;
 int l6 = 7;
 
 //FIFO function
-void fifoenqueue()
+void fifo()
 {
   for(int i=0;i<=6;i++){
     if(i==1){
@@ -21,78 +21,48 @@ void fifoenqueue()
       digitalWrite(l1, HIGH);
       //10s delay time
       delay(10000);
+      //off
+      digitalWrite(l1, LOW);
     }
     if(i==2){
       //LED2 = 5 seconds on
       digitalWrite(l2, HIGH);
       //5s delay time
       delay(5000);
+      //off
+      digitalWrite(l1, LOW);
     }
     if(i==3){
       //LED3 = 8 seconds on
       digitalWrite(l3, HIGH);
       //8s delay time
       delay(8000);
+      //off
+      digitalWrite(l1, LOW);
     }
     if(i==4){
       //LED4 = 3 seconds on
       digitalWrite(l4, HIGH);
       //3s delay time
       delay(3000);
+      //off
+      digitalWrite(l1, LOW);
     }
     if(i==5){
       //LED5 = 1 seconds on
       digitalWrite(l5, HIGH);
       //1s delay time
       delay(1000);
+      //off
+      digitalWrite(l1, LOW);
     }
     if(i==6){
       //LED6 = 2 seconds on
       digitalWrite(l6, HIGH);
       //2s delay time
       delay(2000);
-    }
-  }
-}
-
-void fifodequeue()
-{
-  for(int i=0;i<=6;i++){
-    if(i==1){
-      //LED1 = 10 seconds off
+      //off
       digitalWrite(l1, LOW);
-      //10s delay time
-      delay(10000);
-    }
-    if(i==2){
-      //LED2 = 5 seconds off
-      digitalWrite(l2, LOW);
-      //5s delay time
-      delay(5000);
-    }
-    if(i==3){
-      //LED3 = 8 seconds off
-      digitalWrite(l3, LOW);
-      //8s delay time
-      delay(8000);
-    }
-    if(i==4){
-      //LED4 = 3 seconds off
-      digitalWrite(l4, LOW);
-      //3s delay time
-      delay(3000);
-    }
-    if(i==5){
-      //LED5 = 1 seconds off
-      digitalWrite(l5, LOW);
-      //1s delay time
-      delay(1000);
-    }
-    if(i==6){
-      //LED6 = 2 seconds off
-      digitalWrite(l6, LOW);
-      //2s delay time
-      delay(2000);
     }
   }
 }
@@ -115,8 +85,6 @@ void loop()
   //First in First out Execution
   //The first in to first out
   
-  //Calling fifoenqueue() function
+  //Calling fifo() function
   fifoenqueue();
-  //Calling fifodequeue() function
-  fifodequeue();
 }

@@ -8,7 +8,7 @@
 #define size 6
 
 //declaring len[] array with size of six
-int len[6];
+int len[size];
 //qt = quantum time
 int qt = 1000;
 //other global variables to be seen in loop() function

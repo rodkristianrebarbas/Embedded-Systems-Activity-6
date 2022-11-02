@@ -32,7 +32,7 @@ int t4 = 3000;
 int t5 = 1000;
 int t6 = 2000;
 
-//Descending Sort Function
+//Descending Sort Algorithm Function
 void sort_desc(){
   int a;
   for (int i = 0; i < 6; ++i) {
@@ -50,6 +50,7 @@ void sort_desc(){
 //Round Robin Function
 void roundrobin(){
   //looping sequence through 2D loop
+  //Round Robin Algorithm
   for(int i=0;i<rrc;i++){
     for(int j=0;j<size;j++){
       //for LED 1

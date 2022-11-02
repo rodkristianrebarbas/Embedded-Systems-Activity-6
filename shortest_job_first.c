@@ -4,8 +4,9 @@
 //Activity #6
 //Round Robin Code
 
+//defining size of six
 #define size 6
-
+//declaring len[] array with the size of six
 int len[6];
 
 //Declaring variables for the LEDs globally

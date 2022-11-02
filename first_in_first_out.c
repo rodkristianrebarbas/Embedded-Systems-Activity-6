@@ -95,4 +95,6 @@ void loop()
   
   //Calling fifo() function
   fifo();
+  //Stops the looping sequence
+  while(Serial.available()==0){}
 }

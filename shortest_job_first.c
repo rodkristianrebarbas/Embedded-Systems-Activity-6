@@ -44,33 +44,33 @@ void leddisplay(){
   for(int i=5;i>=0;i--){
     if (len[i] == t1){
       digitalWrite(l1, HIGH);
-  	  delay(t1); 
-  	  digitalWrite(l1, LOW);
+      delay(t1); 
+      digitalWrite(l1, LOW);
     }
     if (len[i] == t2){
       digitalWrite(l2, HIGH);
-  	  delay(t2); 
-  	  digitalWrite(l2, LOW);
+      delay(t2); 
+      digitalWrite(l2, LOW);
     }
     if (len[i] == t3){
       digitalWrite(l3, HIGH);
-  	  delay(t3); 
-  	  digitalWrite(l3, LOW);
+      delay(t3); 
+      digitalWrite(l3, LOW);
     }
     if (len[i] == t4){
       digitalWrite(l4, HIGH);
-  	  delay(t4); 
-  	  digitalWrite(l4, LOW);
+      delay(t4); 
+      digitalWrite(l4, LOW);
     }
     if (len[i] == t5){
       digitalWrite(l5, HIGH);
-  	  delay(t5); 
-  	  digitalWrite(l5, LOW);
+      delay(t5); 
+      digitalWrite(l5, LOW);
     }
     if (len[i] == t6){
       digitalWrite(l6, HIGH);
-  	  delay(t6); 
-  	  digitalWrite(l6, LOW);
+      delay(t6); 
+      digitalWrite(l6, LOW);
     }
   }
 }

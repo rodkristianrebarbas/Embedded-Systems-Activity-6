@@ -7,7 +7,7 @@
 //defining size of six
 #define size 6
 //declaring len[] array with the size of six
-int len[6];
+int len[size];
 
 //Declaring variables for the LEDs globally
 int l1 = 2;
